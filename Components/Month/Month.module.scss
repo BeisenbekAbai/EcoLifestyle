@@ -1,0 +1,45 @@
+.wrapper{
+    width: 212px;
+    height: 171px;
+    border: 1px solid gray;
+}
+.article{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--orange);
+    font-size: 16px;
+    font-weight: 600;
+}
+.dayNames{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    &__day{
+        border: 1px solid gray;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: white;
+    }
+}
+.items{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    &__day{
+        border: 1px solid gray;
+        width: 30px;
+        height: 20px;
+        font-weight: 600;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

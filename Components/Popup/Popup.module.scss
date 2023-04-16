@@ -1,0 +1,131 @@
+.wrapper{
+    display: flex;
+    position: relative;
+}
+.text{
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 30px;
+    margin-top: 10px;
+}
+.nav{
+    width: 200px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.selected{
+    background-color: var(--red);
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    transition-duration: 500ms;
+    &__opened{
+        border-radius: 10px 10px 0px 0px;
+    }
+    filter: brightness(1);
+}
+.selected:active{
+    transition-duration: 0ms;
+    filter: brightness(.75);
+}
+.items{
+    position: relative;
+    z-index: 1;
+    top: -113px;
+    transition-duration: 250ms;
+    &__opened{
+        top: 0px;
+    }
+    &__last{
+        border-radius: 0px 0px 10px 10px;
+        border-bottom: 2px solid gray;
+    }
+}
+.option{
+    background-color: white;
+    padding: 10px 20px;
+    border-top: 2px solid gray;
+    cursor: pointer;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+}
+
+@media (max-width: 1100px) {
+    .text{
+        font-size: 15px;
+        padding-right: 30px;
+        margin-top: 10px;
+    }
+    .nav{
+        width: 150px;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 5px;
+        position: relative;
+        left: -10px;
+    }
+    .selected{
+        height: 28px;
+        font-size: 14px;
+        padding: 7px 20px;
+    }
+    .items{
+        position: relative;
+        top: -113px;
+        transition-duration: 250ms;
+        visibility: hidden;
+        &__opened{
+            top: 0px;
+            visibility: visible;
+        }
+        &__last{
+            border-radius: 0px 0px 10px 10px;
+            border-bottom: 2px solid gray;
+        }
+    }
+    .option{
+        background-color: white;
+        padding: 6px 16px;
+        border-top: 2px solid gray;
+        cursor: pointer;
+        border-left: 2px solid gray;
+        border-right: 2px solid gray;
+        font-size: 12px;
+    }
+}
+
+
+
+@media (max-width: 540px) {
+    .wrapper{
+        display: flex;
+        position: relative;
+        width: 300px;
+    }
+    .text{
+        font-size: 12px;
+        width: 200px;
+    }
+    .nav{
+        width: 140px;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 5px;
+        position: relative;
+        left: -30px;
+    }
+    .selected{
+        height: 28px;
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+}

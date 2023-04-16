@@ -1,0 +1,83 @@
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.background{
+    width: 100%;
+    height: 115vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../../public/bg1.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.line{
+    position: absolute;
+    top: calc(50% - 100px);
+    left: -3px;
+    width: calc(100% + 60px);
+    height: 200px;
+    background-color: black;
+    opacity: .7;
+    filter: blur(3px);
+}
+.nav{
+    &__btn1{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #D63C3C;
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 250px);
+        transition-duration: 100ms;
+    }
+    &__btn1:hover{
+        width: 110px;
+        height: 110px;
+        top: calc(50% - 55px);
+        left: calc(50% - 255px);
+    }
+    &__btn2{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #73B92E;
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+        transition-duration: 100ms;
+    }
+    &__btn2:hover{
+        width: 110px;
+        height: 110px;
+        top: calc(50% - 55px);
+        left: calc(50% - 55px);
+    }
+    &__btn3{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #E16F2E;
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% + 150px);
+        transition-duration: 100ms;
+    }
+    &__btn3:hover{
+        width: 110px;
+        height: 110px;
+        top: calc(50% - 55px);
+        left: calc(50% + 145px);
+    }
+    :active{
+        filter: brightness(.75);
+    }
+}
